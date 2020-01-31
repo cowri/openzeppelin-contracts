@@ -101,6 +101,12 @@ contract ERC20 is Context, IERC20 {
         return true;
     }
 
+    function _transferFrom(address sender, address recipient, uint256 amount) public returns (bool) {
+        _transfer(sender, recipient, amount);
+        _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount, "ERC20: transfer amount exceeds allowance"));
+        return true;
+    }
+
     /**
      * @dev Atomically increases the allowance granted to `spender` by the caller.
      *
