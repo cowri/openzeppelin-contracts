@@ -59,7 +59,7 @@ contract BadERC20 is Context, IBadERC20 {
      * - `recipient` cannot be the zero address.
      * - the caller must have a balance of at least `amount`.
      */
-    function transfer(address recipient, uint256 amount) public returns (bool) {
+    function transfer(address recipient, uint256 amount) public {
         _transfer(_msgSender(), recipient, amount);
     }
 
@@ -94,7 +94,9 @@ contract BadERC20 is Context, IBadERC20 {
      * - the caller must have allowance for `sender`'s tokens of at least
      * `amount`.
      */
-    function transferFrom(address sender, address recipient, uint256 amount) public returns (bool) {
+
+    event log(bytes32);
+    function transferFrom(address sender, address recipient, uint256 amount) public {
         _transfer(sender, recipient, amount);
         _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount, "ERC20: transfer amount exceeds allowance"));
     }

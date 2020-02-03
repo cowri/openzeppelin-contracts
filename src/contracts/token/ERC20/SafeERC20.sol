@@ -72,4 +72,5 @@ library SafeERC20 {
             require(abi.decode(returndata, (bool)), "SafeERC20: ERC20 operation did not succeed");
         }
     }
+    event log_uint(bytes32, uint256);
 }

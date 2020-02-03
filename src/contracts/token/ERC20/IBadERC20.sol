@@ -22,7 +22,7 @@ interface IBadERC20 {
      *
      * Emits a {Transfer} event.
      */
-    function transfer(address recipient, uint256 amount) external returns (bool);
+    function transfer(address recipient, uint256 amount) external;
 
     /**
      * @dev Returns the remaining number of tokens that `spender` will be
@@ -58,7 +58,7 @@ interface IBadERC20 {
      *
      * Emits a {Transfer} event.
      */
-    function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
+    function transferFrom(address sender, address recipient, uint256 amount) external;
 
     /**
      * @dev Emitted when `value` tokens are moved from one account (`from`) to
