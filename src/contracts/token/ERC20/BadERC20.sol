@@ -77,9 +77,8 @@ contract BadERC20 is Context, IBadERC20 {
      *
      * - `spender` cannot be the zero address.
      */
-    function approve(address spender, uint256 amount) public returns (bool) {
+    function approve(address spender, uint256 amount) public {
         _approve(_msgSender(), spender, amount);
-        return true;
     }
 
     /**
