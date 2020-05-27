@@ -77,9 +77,8 @@ contract ERC20NoBool is Context, IERC20NoBool {
      *
      * - `spender` cannot be the zero address.
      */
-    function approve(address spender, uint256 amount) public returns (bool) {
+    function approve(address spender, uint256 amount) public {
         _approve(_msgSender(), spender, amount);
-        return true;
     }
 
     /**

@@ -47,7 +47,7 @@ interface IBadERC20 {
      *
      * Emits an {Approval} event.
      */
-    function approve(address spender, uint256 amount) external returns (bool);
+    function approve(address spender, uint256 amount) external;
 
     /**
      * @dev Moves `amount` tokens from `sender` to `recipient` using the
