@@ -1,11 +1,11 @@
 pragma solidity ^0.5.0;
 
-import "./IBadERC20.sol";
+import "./IERC20NoBool.sol";
 
 /**
  * @dev Optional functions from the ERC20 standard.
  */
-contract BadERC20Detailed is IBadERC20 {
+contract ERC20NoBoolDetailed is IERC20NoBool {
     string private _name;
     string private _symbol;
     uint8 private _decimals;

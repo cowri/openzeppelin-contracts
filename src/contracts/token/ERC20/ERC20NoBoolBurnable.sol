@@ -1,14 +1,14 @@
 pragma solidity ^0.5.0;
 
 import "../../GSN/Context.sol";
-import "./BadERC20.sol";
+import "./ERC20NoBool.sol";
 
 /**
  * @dev Extension of {ERC20} that allows token holders to destroy both their own
  * tokens and those that they have an allowance for, in a way that can be
  * recognized off-chain (via event analysis).
  */
-contract ERC20Burnable is Context, BadERC20 {
+contract ERC20NoBoolBurnable is Context, ERC20NoBool {
     /**
      * @dev Destroys `amount` tokens from the caller.
      *

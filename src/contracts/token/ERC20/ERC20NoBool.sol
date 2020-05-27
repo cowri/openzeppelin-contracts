@@ -1,7 +1,7 @@
 pragma solidity ^0.5.0;
 
 import "../../GSN/Context.sol";
-import "./IBadERC20.sol";
+import "./IERC20NoBool.sol";
 import "../../math/SafeMath.sol";
 
 /**
@@ -28,7 +28,7 @@ import "../../math/SafeMath.sol";
  * functions have been added to mitigate the well-known issues around setting
  * allowances. See {IERC20-approve}.
  */
-contract BadERC20 is Context, IBadERC20 {
+contract ERC20NoBool is Context, IERC20NoBool {
     using SafeMath for uint256;
 
     mapping (address => uint256) private _balances;

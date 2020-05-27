@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-import "./BadERC20.sol";
+import "./ERC20NoBool.sol";
 import "../../access/roles/MinterRole.sol";
 
 /**
@@ -9,7 +9,7 @@ import "../../access/roles/MinterRole.sol";
  *
  * At construction, the deployer of the contract is the only minter.
  */
-contract BadERC20Mintable is BadERC20, MinterRole {
+contract ERC20NoBoolMintable is ERC20NoBool, MinterRole {
     /**
      * @dev See {ERC20-_mint}.
      *
